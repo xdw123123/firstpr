@@ -1,0 +1,68 @@
+/*清除所有标签的默认内外边距*/
+/*盒子的大小默认按照设定的width和height，不是width+padding+border*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: bordre-box;
+}
+/*清除em,i的倾斜效果*/
+em,
+i {
+    font-style: normal
+}
+/*清除li的默认小圆点*/
+li {
+    list-style: none
+}
+
+img {
+    border: 0;/*低版本浏览器的外面有链接会有边框的问题*/
+    vertical-align: middle/*取消图片低侧有空白缝隙的问题*/
+}
+
+button {
+/*统一改成小手*/
+    cursor: pointer
+}
+
+a {
+/*统一链接颜色，清除链接下划线*/
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c81623
+}
+
+button,
+input {
+/*字体中的汉字用Unicode编码防止不能识别*/
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}
+
+body {
+    -webkit-font-smoothing: antialiased;/*css3新特性，抗锯齿性*/
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+/*定义隐藏样式*/
+    display: none
+}
+
+/*伪元素清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
